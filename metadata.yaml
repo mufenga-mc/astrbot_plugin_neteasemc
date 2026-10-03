@@ -1,0 +1,9 @@
+name: astrbot_plugin_neteasemc
+display_name: Astrbot for 《我的世界》中国版
+desc: 把《我的世界》中国版和 QQ 接起来：游戏消息转进 QQ（支持真 @ 人）、QQ 消息推给游戏，还能在游戏里直接和 AI 对话。配套模组见 README。
+help: 在群里发 /mc bind 绑定会话；游戏里 #连接 连上。详细用法见 README。
+version: v1.3.0
+author: 慕枫
+repo: https://github.com/mufenga-mc/astrbot_plugin_neteasemc
+support_platforms:
+  - aiocqhttp

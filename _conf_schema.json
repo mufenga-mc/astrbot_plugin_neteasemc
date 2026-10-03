@@ -1,0 +1,87 @@
+{
+  "host": {
+    "type": "string",
+    "description": "监听地址，一般不用改",
+    "default": "127.0.0.1"
+  },
+  "port": {
+    "type": "int",
+    "description": "WebSocket 监听端口。游戏侧目标文件里写 ws://127.0.0.1:这个端口/",
+    "default": 8800
+  },
+  "token": {
+    "type": "string",
+    "description": "连接口令（可留空）。填了之后游戏侧地址要带 ?token=xxx",
+    "default": ""
+  },
+  "target_session": {
+    "type": "string",
+    "description": "游戏消息转发到哪个 QQ 会话（unified_msg_origin）。留空即可，在群里发 /mc bind 会自动绑定",
+    "default": ""
+  },
+  "forward_game_to_qq": {
+    "type": "bool",
+    "description": "游戏 → QQ（把游戏里的消息转发到 QQ）",
+    "default": true
+  },
+  "forward_qq_to_game": {
+    "type": "bool",
+    "description": "QQ → 游戏（把 QQ 的消息推给游戏）",
+    "default": true
+  },
+  "qq_prefix": {
+    "type": "string",
+    "description": "只有以此开头的 QQ 消息才推给游戏；留空 = 所有消息都推（慎用）",
+    "default": "#"
+  },
+  "name_prefix": {
+    "type": "bool",
+    "description": "推给游戏时带上发送者昵称",
+    "default": true
+  },
+  "game_prefix": {
+    "type": "string",
+    "description": "推给游戏时加的前缀，用来区分来源",
+    "default": "[QQ] "
+  },
+  "at_resolve": {
+    "type": "bool",
+    "description": "游戏里 @昵称 时去查群成员列表，解析成真正的 QQ @（关掉则只支持 @QQ号 和 @全体成员）",
+    "default": true
+  },
+  "ai_prefix": {
+    "type": "string",
+    "description": "游戏里以它开头就是「和 AI 对话」（要和模组配置里的 ai_prefix 一致）",
+    "default": "*"
+  },
+  "ai_label": {
+    "type": "string",
+    "description": "AI 回复的前缀",
+    "default": "[AI] "
+  },
+  "ai_history_rounds": {
+    "type": "int",
+    "description": "游戏 AI 记住最近几轮问答（0 = 不记，每次都是新的）",
+    "default": 6
+  },
+  "ai_system_prompt": {
+    "type": "string",
+    "description": "游戏里 AI 对话的额外人设 / 系统提示（填了就它说话，优先级最高）",
+    "default": ""
+  },
+  "ai_persona": {
+    "type": "string",
+    "description": "用 AstrBot 里的哪个人格（填人格名；留空 = 用默认人格）。在群里发 /mc persona 可以列出来",
+    "default": ""
+  },
+  "ai_use_default_persona": {
+    "type": "bool",
+    "description": "没指定人格时使用 AstrBot 的默认人格（关掉 = 裸模型，不带人设）",
+    "default": true
+  },
+  "ai_thinking_notice": {
+    "type": "bool",
+    "description": "模型慢的时候先推一句「（在想…）」",
+    "default": false
+  }
+}

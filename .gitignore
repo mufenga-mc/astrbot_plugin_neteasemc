@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# 插件运行时产生的（不该进仓库）
+state.json
+ai_history.json
+*.log
+
+# 系统
+.DS_Store
+Thumbs.db
